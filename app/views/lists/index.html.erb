@@ -3,14 +3,40 @@
     <h1>Ma liste de films!</h1>
   </div>
 </div>
+<h1> <strong>My List</strong> </h1>
 <ul>
-  <% @lists.each do |list| %>
-    <li><%= link_to list.name, list_path(list) %>
-    <%= link_to "X",list_path(list), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-    </li>
-  <% end %>
+  <div class="row">
+    <% @lists.each do |list| %>
+      <div class="card-list col-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://comarketing-news.fr/wp-content/uploads/marvel-fans.jpg)">
+        <li><%= link_to list.name, list_path(list) %>
+        <%= link_to "X",list_path(list), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+        </li>
+      </div>
+      <% end %>
+  </div>
 </ul>
 
 
 <%= link_to 'Add a new list', new_list_path, class: "btn btn-primary" %>
 
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mattis mauris in pharetra varius. Mauris nec auctor dui. Sed congue et leo non egestas. Ut molestie leo et urna aliquam commodo. Maecenas tempor, lacus vel pulvinar blandit, ligula nunc varius turpis, et vulputate elit libero id nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus ac sapien in justo ornare molestie.
+
+Morbi non accumsan metus. In fermentum tellus orci, sit amet faucibus metus lobortis vel. Nullam quis venenatis mi. Mauris eu risus ut felis laoreet maximus. Nam quis tristique felis. Aenean ultrices eget odio in fringilla. Praesent hendrerit dui quis auctor sodales. Nullam id lorem at mi rutrum lacinia. Nam sed urna quis ex facilisis rutrum.
+
+Nunc elementum lacus eget felis hendrerit auctor. Aliquam erat volutpat. Aliquam eget efficitur nisi. Duis nisi ipsum, tristique vitae nisl sed, pharetra mattis mauris. Vestibulum tincidunt ut orci nec condimentum. Duis suscipit odio risus, sed varius elit mollis sed. Fusce facilisis rhoncus rutrum. Duis arcu felis, mollis a nibh non, ornare aliquam lacus. Sed quis sagittis nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus quis est quis convallis. Maecenas rutrum ante vel ligula suscipit rhoncus. Sed in varius metus. Maecenas a metus ultrices tortor condimentum sodales. Nam auctor sapien ac porttitor placerat.
+
+Aenean porta, elit congue vehicula eleifend, neque enim laoreet arcu, ut blandit tellus tellus et tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam vel ex condimentum, tincidunt risus eget, commodo augue. Vivamus cursus mollis ipsum, sit amet ultrices ante convallis vitae. Curabitur ultricies tempor condimentum. Donec euismod malesuada finibus. Donec auctor auctor arcu faucibus porta. Sed commodo lorem nec magna efficitur vulputate at a eros. Aenean interdum eros sed sem volutpat, et malesuada enim molestie. Nunc varius sodales nisi vel eleifend. Pellentesque ac ornare enim. Fusce rhoncus maximus ex tempus consectetur.
+
+Nulla rhoncus tellus vel mi lobortis, eget aliquam erat varius. Proin rutrum dui velit, ac commodo enim pellentesque nec. Proin eget aliquam mauris. Nulla ultricies hendrerit elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec neque turpis, ultricies sit amet arcu non, tincidunt vehicula tellus. Nullam pharetra nisl et augue luctus vehicula. Integer arcu lacus, efficitur sit amet magna a, laoreet efficitur nunc.
+
+Praesent in ex mauris. Nullam eu porttitor erat, bibendum venenatis nisi. Pellentesque feugiat risus nec fermentum auctor. Duis egestas sagittis lobortis. Ut eros tortor, mollis et nibh in, posuere condimentum urna. Suspendisse gravida ex viverra nulla tincidunt, sit amet pharetra tellus rhoncus. Pellentesque vestibulum finibus risus, vel venenatis orci rutrum eu. Etiam at aliquam dolor.
+
+Vivamus molestie mattis fermentum. Curabitur lobortis, justo quis volutpat porta, justo turpis interdum sem, et ornare risus nisl eget turpis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec eu velit in libero commodo efficitur vel sit amet felis. Nulla quis tincidunt nunc, nec dictum nisi. Donec ac eros congue, vehicula ex nec, vehicula ligula. Nunc luctus, metus id sollicitudin malesuada, mi ex ultrices massa, et suscipit enim turpis quis metus. Ut ac mi a libero placerat molestie interdum vel ipsum. Vivamus laoreet, elit ut facilisis mattis, dui risus maximus diam, quis tempor massa elit vitae tortor. Nunc ac nunc ut quam blandit dapibus.
+
+Sed massa ex, congue sit amet congue quis, vulputate in erat. Morbi bibendum magna et risus porta vehicula. Vivamus lobortis ultrices velit, vitae vehicula nulla eleifend ut. Ut eleifend nisi vel urna congue vulputate. Etiam vel volutpat nulla. Integer felis ipsum, porta eget ullamcorper sed, dignissim vel tellus. Vestibulum mollis sodales luctus. Nunc condimentum nec metus eu viverra. Praesent suscipit augue ex, vitae tempor diam rutrum eu. Ut pharetra ipsum ut nisi facilisis, imperdiet consequat erat egestas. Suspendisse aliquam posuere tortor vitae semper.
+
+Cras malesuada, lorem sed feugiat porta, ex quam rhoncus ligula, eget faucibus metus diam ac sem. Ut in vehicula erat. Maecenas dignissim, ipsum tincidunt varius feugiat, urna dolor sollicitudin erat, fermentum elementum mauris leo sed enim. Ut sed ex et mi eleifend dapibus sit amet at ipsum. Vestibulum ac congue ipsum. Mauris finibus lacinia augue. Quisque porttitor odio sed felis consequat gravida. Nunc metus ligula, ullamcorper vitae tempor eget, mattis vitae magna. Mauris id fringilla massa, sed faucibus ex. Maecenas sed orci a nisi egestas varius. Donec pharetra lobortis quam vitae venenatis. Curabitur quis bibendum ipsum, in pharetra ex. Nullam ut dignissim dui. Curabitur mauris diam, eleifend ut felis nec, suscipit gravida turpis. Proin vitae magna at lacus congue dapibus. Sed mattis est et magna dignissim, ultricies gravida enim placerat.
+
+Sed nec lorem orci. Cras faucibus mattis enim non placerat. Nulla facilisi. Sed non pellentesque orci. Phasellus gravida sagittis consequat. Mauris posuere id tortor in iaculis. Etiam a sem in nunc ultricies dapibus. Nulla consequat, tellus at tristique posuere, sapien est sagittis dolor, quis pharetra augue leo ac ligula. Nulla ullamcorper enim et orci dignissim congue. Cras nec auctor nisl. Etiam varius tristique felis, non malesuada ligula dignissim sed.
+
+Nulla quis est porta, cursus leo vel, hendrerit mauris. Quisque hendrerit magna in enim vehicula, vel finibus turpis tristique. Vivamus pharetra ante leo, et aliquet est scelerisque pulvinar. Nulla euismod dolor condimentum ante viverra, et iaculis nulla fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu felis sit amet urna pretium tincidunt sit amet vel est. Fusce nulla sem, ultrices ut neque ut, posuere placerat augue. In hac habitasse platea dictumst. Suspendisse in euismod ligula, vitae placerat nunc. Aliquam et mauris et nisl malesuada blandit.</p>
